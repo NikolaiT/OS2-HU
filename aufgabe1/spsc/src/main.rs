@@ -1,0 +1,137 @@
+use std::thread;
+//use std::sync::atomic::{AtomicUsize, Ordering};
+use std::sync::{Arc, Mutex};
+use std::usize;
+use std::collections::VecDeque;
+
+/*
+	ideas and code snippets taken from:
+
+	https://stackoverflow.com/questions/47092072/one-mutable-borrow-and-multiple-immutable-borrows
+	https://gist.github.com/LeoTindall/e6d40782b05dc8ac40faf3a0405debd3
+	https://doc.rust-lang.org/std/sync/struct.Mutex.html
+*/
+
+#[derive(Debug)]
+pub struct SendError<T>(pub T);
+
+#[derive(Debug)]
+pub struct RecvError {
+	message: String
+}
+
+// All three of these types are wrapped around a generic type T.
+// T is required to be Send (a marker trait automatically implemented when
+// it is safe to do so) because it denotes types that are safe to move between
+// threads, which is the whole point of the WorkQueue.
+// For this implementation, T is required to be Copy as well, for simplicity.
+
+/// A generic work queue for work elements which can be trivially copied.
+/// Any producer of work can add elements and any worker can consume them.
+/// WorkQueue derives Clone so that it can be distributed among threads.
+
+#[derive(Clone)]
+pub struct Producer<T: Send + Copy> {
+	queue: Arc<Mutex<VecDeque<T>>>,
+}
+
+#[derive(Clone)]
+pub struct Consumer<T: Send + Copy> {
+	queue: Arc<Mutex<VecDeque<T>>>,
+}
+
+impl<T: Send + Copy> Producer<T> {
+
+	pub fn new(capacity: usize) -> Self {
+		Self { queue: Arc::new(Mutex::new(VecDeque::with_capacity(capacity))) }
+	}
+
+	pub fn send(&self, value: T) -> Result<(), SendError<T>> {
+		// try to get a lock to the mutex...
+		if let Ok(mut queue) = self.queue.lock() {
+			queue.push_back(value);
+			Ok(())
+		} else {
+			panic!("Producer::send() could not lock mutex.");
+		}
+	}
+}
+
+impl<T: Send + Copy> Consumer<T> {
+
+	pub fn new(capacity: usize) -> Self {
+		Self { queue: Arc::new(Mutex::new(VecDeque::with_capacity(capacity))) }
+	}
+
+	pub fn recv(&self) -> Result<T, RecvError> {
+		// A lot is going on here. self.queue is an Arc of Mutex. Arc can deref
+		// into its internal type, so we can call the methods of that inner
+		// type (Mutex) without dereferencing, so this is like
+		//      *(self.inner).lock()
+		// but doesn't look awful. Mutex::lock() returns a
+		// Result<MutexGuard<VecDeque<T>>>.
+		let maybe_queue = self.queue.lock();
+
+		if let Ok(mut queue) = maybe_queue {
+
+			/// unpack the option and return a Result
+			/// in case of an error from pop_front(), return
+			/// a descriptive error message.
+			let result = queue.pop_front();
+			match result {
+				None => Err(RecvError{ message: "Consumer::recv() pop_front() returned None.".to_string() }),
+				Some(result) => Ok(result),
+			}
+
+		} else {
+			Err(RecvError{ message: "Consumer::recv() could not lock mutex.".to_string() })
+		}
+	}
+}
+
+pub fn channel<T: Send + Copy>(capacity: usize) -> (Producer<T>, Consumer<T>) {
+
+	let queue = Arc::new(Mutex::new(VecDeque::with_capacity(capacity)));
+
+	(
+		Producer {
+			queue: queue.clone(),
+		},
+		Consumer {
+			queue: queue.clone(),
+		}
+	)
+}
+
+fn main() {
+	// start a producer thread that sends the values 1..count
+	// and start a consumer thread that consumes
+	let (px, cx) = channel(64);
+	let count = 30;
+	
+	let producer_thread = thread::spawn(move || {
+		for i in 1..count {
+			px.send(i).unwrap();
+		}
+	});
+
+	let consumer_thread = thread::spawn(move || {
+		let mut sum = 0;
+		for i in 1..count {
+			match cx.recv() {
+				Ok(val)  => {
+					println!("Receiving from producer: {:?}", val);
+					sum += val;
+				},
+				Err(e) => println!("Error: {:?}", e),
+			};
+		}
+
+		sum
+	});
+
+	producer_thread.join().unwrap();
+
+	let sum = consumer_thread.join().unwrap();
+	println!("Summing over {} values yields the sum {}", count, sum);
+}

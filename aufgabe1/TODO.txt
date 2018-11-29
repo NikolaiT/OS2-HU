@@ -1,0 +1,10 @@
+# 29.11.2018
+	- read assignment description: https://moodle.hu-berlin.de/mod/assign/view.php?id=1785667 [DONE]
+	- add project and open in intellij [DONE]
+	- Read slides rust4 to rust6 to get overview of language [DONE]
+	- check implementation of mpsc: https://github.com/rust-lang/rust/tree/master/src/libstd/sync/mpsc
+	
+	- Looks good: https://github.com/rust-lang/rust/blob/master/src/libstd/sync/mpsc/spsc_queue.rs
+	
+	- This is a ready solution: https://github.com/polyfractal/bounded-spsc-queue
+	- use some code from here: https://gist.github.com/LeoTindall/e6d40782b05dc8ac40faf3a0405debd3
