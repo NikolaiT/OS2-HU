@@ -13,6 +13,11 @@ use std::collections::VecDeque;
 */
 
 #[derive(Debug)]
+pub struct Error {
+	message: String
+}
+
+#[derive(Debug)]
 pub struct SendError<T>(pub T);
 
 #[derive(Debug)]
@@ -55,6 +60,24 @@ impl<T: Send + Copy> Producer<T> {
 			panic!("Producer::send() could not lock mutex.");
 		}
 	}
+
+	pub fn capacity(&self) -> Result<usize, Error> {
+		if let Ok(mut queue) = self.queue.lock() {
+			let capacity = queue.capacity();
+			Ok(capacity)
+		} else {
+			panic!("Producer::send() could not lock mutex.");
+		}
+	}
+
+	pub fn size(&self) -> Result<usize, Error> {
+		if let Ok(mut queue) = self.queue.lock() {
+			let len = queue.len();
+			Ok(len)
+		} else {
+			panic!("Producer::send() could not lock mutex.");
+		}
+	}
 }
 
 impl<T: Send + Copy> Consumer<T> {
@@ -74,9 +97,9 @@ impl<T: Send + Copy> Consumer<T> {
 
 		if let Ok(mut queue) = maybe_queue {
 
-			/// unpack the option and return a Result
-			/// in case of an error from pop_front(), return
-			/// a descriptive error message.
+			// unpack the option and return a Result
+			// in case of an error from pop_front(), return
+			// a descriptive error message.
 			let result = queue.pop_front();
 			match result {
 				None => Err(RecvError{ message: "Consumer::recv() pop_front() returned None.".to_string() }),
@@ -85,6 +108,24 @@ impl<T: Send + Copy> Consumer<T> {
 
 		} else {
 			Err(RecvError{ message: "Consumer::recv() could not lock mutex.".to_string() })
+		}
+	}
+
+	pub fn capacity(&self) -> Result<usize, Error> {
+		if let Ok(mut queue) = self.queue.lock() {
+			let capacity = queue.capacity();
+			Ok(capacity)
+		} else {
+			panic!("Producer::send() could not lock mutex.");
+		}
+	}
+
+	pub fn size(&self) -> Result<usize, Error> {
+		if let Ok(mut queue) = self.queue.lock() {
+			let len = queue.len();
+			Ok(len)
+		} else {
+			panic!("Producer::send() could not lock mutex.");
 		}
 	}
 }
@@ -134,4 +175,122 @@ fn main() {
 
 	let sum = consumer_thread.join().unwrap();
 	println!("Summing over {} values yields the sum {}", count, sum);
+}
+
+
+
+/*
+ * Tests.
+ */
+
+#[cfg(test)]
+mod tests {
+
+	use super::*;
+	use std::thread;
+
+	#[test]
+	fn test_consumer_pop() {
+		let capacity: usize = 100;
+		let (px, cx) = channel(capacity);
+
+		for i in 0..9 {
+			px.send(i);
+			assert_eq!(px.capacity().unwrap(), capacity.next_power_of_two()-1);
+			assert_eq!(px.size().unwrap(), i+1);
+		}
+
+		for i in 0..9 {
+			assert_eq!(cx.size().unwrap(), 9-i);
+			let t = cx.recv().unwrap();
+			assert_eq!(cx.capacity().unwrap(), capacity.next_power_of_two()-1);
+			assert_eq!(cx.size().unwrap(), 9-i-1);
+			assert_eq!(t, i);
+		}
+	}
+
+	#[test]
+	fn test_threaded() {
+		let capacity: usize = 64;
+		let (px, cx) = channel(capacity);
+
+		let producer_thread = thread::spawn(move || {
+			for i in 0..10000 {
+				px.send(i);
+			}
+		});
+
+		let mut k = 0;
+
+		for i in 0..10000 {
+			match cx.recv() {
+				Ok(val)  => {
+					assert_eq!(val, i-k);
+				},
+				Err(e) => {
+					k += 1;
+					println!("Error: {:?}", e)
+				},
+			};
+		}
+	}
+
+	extern crate time;
+	use self::time::PreciseTime;
+
+
+	#[test]
+	#[ignore]
+	fn bench_spsc_throughput() {
+		let iterations: i64 = 2i64.pow(20);
+
+		let (px, cx) = channel(512);
+
+		let start = PreciseTime::now();
+		for i in 0..iterations as usize {
+			px.send(i);
+		}
+		let t = cx.recv().unwrap();
+		assert_eq!(t, 0);
+		let end = PreciseTime::now();
+		let throughput =
+			(iterations as f64 / (start.to(end)).num_nanoseconds().unwrap() as f64) * 1000000000f64;
+		println!(
+			"Spsc Throughput: {:.2}/s -- (iterations: {} in {} ns)",
+			throughput,
+			iterations,
+			(start.to(end)).num_nanoseconds().unwrap()
+		);
+	}
+
+	// we can either take the normal streaming channel mpsc::channel
+	// or the mpsc::sync_channel
+	// see here: https://doc.rust-lang.org/std/sync/mpsc/
+	use std::sync::mpsc::sync_channel;
+	use std::sync::mpsc::channel as mpsc_channel;
+
+	#[test]
+	#[ignore]
+	fn bench_mpsc_stdlib_throughput() {
+		let iterations: i64 = 2i64.pow(20);
+
+		let (tx, rx) = mpsc_channel();
+
+		let start = PreciseTime::now();
+		for i in 0..iterations as usize {
+			tx.send(i).unwrap();
+		}
+		let t = rx.recv().unwrap();
+		assert_eq!(t, 0);
+		let end = PreciseTime::now();
+		let throughput =
+			(iterations as f64 / (start.to(end)).num_nanoseconds().unwrap() as f64) * 1000000000f64;
+		println!(
+			"MPSC Stdlib Throughput: {:.2}/s -- (iterations: {} in {} ns)",
+			throughput,
+			iterations,
+			(start.to(end)).num_nanoseconds().unwrap()
+		);
+	}
+
 }

@@ -1,8 +1,13 @@
 [package]
 name = "spsc"
 version = "0.1.0"
-authors = ["Student <student@informatik.hu-berlin.de>"]
+authors = ["Nikolai Tschacher <tschachn@informatik.hu-berlin.de>"]
+license = "Apache-2.0"
+description = "A unbounded SPSC queue"
+repository = "https://github.com/NikolaiT/OS2-HU/tree/master/aufgabe1"
+homepage = "https://github.com/NikolaiT/OS2-HU/tree/master/aufgabe1"
 
 [dependencies]
+time = "0.1.40"
 
 [dev-dependencies]

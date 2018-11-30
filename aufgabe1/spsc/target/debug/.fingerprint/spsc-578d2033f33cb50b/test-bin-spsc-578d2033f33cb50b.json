@@ -1,0 +1,1 @@
+{"rustc":2049182171942789226,"features":"[]","target":12188059409581965649,"profile":6900395999436088406,"path":1036222786711178230,"deps":[["time v0.1.40","time",16997283567141689695]],"local":[{"MtimeBased":[[1543589620,594562438],".fingerprint/spsc-578d2033f33cb50b/dep-test-bin-spsc-578d2033f33cb50b"]}],"rustflags":[],"edition":"Edition2015"}
