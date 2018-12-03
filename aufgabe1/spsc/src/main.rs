@@ -5,7 +5,7 @@ use std::usize;
 use std::collections::VecDeque;
 
 /*
-	ideas and code snippets taken from:
+	Ideas and code snippets taken from:
 
 	https://stackoverflow.com/questions/47092072/one-mutable-borrow-and-multiple-immutable-borrows
 	https://gist.github.com/LeoTindall/e6d40782b05dc8ac40faf3a0405debd3
@@ -97,14 +97,28 @@ impl<T: Send + Copy> Consumer<T> {
 
 		if let Ok(mut queue) = maybe_queue {
 
-			// unpack the option and return a Result
-			// in case of an error from pop_front(), return
-			// a descriptive error message.
-			let result = queue.pop_front();
+			let mut result;
+
+			// loop until pop_front() actually returns a value
+			loop {
+				// unpack the option and return a Result
+				// in case of an error from pop_front(), return
+				// a descriptive error message.
+				result = queue.pop_front();
+				println!("In Recv()");
+				match result {
+					None => {}
+					Some(res) => {
+						break;
+					}
+				}
+			}
+
 			match result {
 				None => Err(RecvError{ message: "Consumer::recv() pop_front() returned None.".to_string() }),
-				Some(result) => Ok(result),
+				Some(result) => Ok(result)
 			}
+
 
 		} else {
 			Err(RecvError{ message: "Consumer::recv() could not lock mutex.".to_string() })
@@ -178,7 +192,6 @@ fn main() {
 }
 
 
-
 /*
  * Tests.
  */
@@ -210,29 +223,56 @@ mod tests {
 	}
 
 	#[test]
+	fn queue_length_is_accurate() {
+		let (px, cx) = channel(100);
+		assert_eq!(0, cx.size().unwrap());
+		for i in 0..11 {
+			px.send(i);
+			assert_eq!(i+1, cx.size().unwrap());
+		}
+	}
+
+	#[test]
+	fn threaded_queue_multiple_producer_single_consumer() {
+		let (px1, cx) = channel(100);
+		let px2 = px1.clone();
+
+		thread::spawn(move || {
+			px1.send(1).unwrap();
+		});
+
+		thread::spawn(move|| {
+			px2.send(1).unwrap();
+		});
+
+		for _ in 0 .. 1 {
+			assert_eq!(1, cx.recv().unwrap());
+		}
+	}
+
+	#[test]
 	fn test_threaded() {
 		let capacity: usize = 64;
 		let (px, cx) = channel(capacity);
 
 		let producer_thread = thread::spawn(move || {
-			for i in 0..10000 {
+			for i in 0..1000 {
 				px.send(i);
 			}
 		});
 
-		let mut k = 0;
-
-		for i in 0..10000 {
-			match cx.recv() {
-				Ok(val)  => {
-					assert_eq!(val, i-k);
-				},
-				Err(e) => {
-					k += 1;
-					println!("Error: {:?}", e)
-				},
-			};
-		}
+		let consumer_thread = thread::spawn(move || {
+			for i in 0..1000 {
+				match cx.recv() {
+					Ok(val)  => {
+						assert_eq!(val, i);
+					},
+					Err(e) => {
+						println!("Error: {:?}", e)
+					},
+				};
+			}
+		});
 	}
 
 	extern crate time;
@@ -240,7 +280,7 @@ mod tests {
 
 
 	#[test]
-	#[ignore]
+	//#[ignore]
 	fn bench_spsc_throughput() {
 		let iterations: i64 = 2i64.pow(20);
 
@@ -270,7 +310,7 @@ mod tests {
 	use std::sync::mpsc::channel as mpsc_channel;
 
 	#[test]
-	#[ignore]
+	//#[ignore]
 	fn bench_mpsc_stdlib_throughput() {
 		let iterations: i64 = 2i64.pow(20);
 
