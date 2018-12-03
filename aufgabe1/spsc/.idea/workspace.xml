@@ -2,8 +2,146 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd2dd4a6-1711-4c75-bf23-07de83edc517" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/benchmark.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/.fingerprint/spsc-578d2033f33cb50b/test-bin-spsc-578d2033f33cb50b" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/.fingerprint/spsc-578d2033f33cb50b/test-bin-spsc-578d2033f33cb50b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/.fingerprint/spsc-578d2033f33cb50b/test-bin-spsc-578d2033f33cb50b.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/.fingerprint/spsc-578d2033f33cb50b/test-bin-spsc-578d2033f33cb50b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/.fingerprint/spsc-6c61b1eaecb2ec6d/bin-spsc-6c61b1eaecb2ec6d" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/.fingerprint/spsc-6c61b1eaecb2ec6d/bin-spsc-6c61b1eaecb2ec6d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/.fingerprint/spsc-6c61b1eaecb2ec6d/bin-spsc-6c61b1eaecb2ec6d.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/.fingerprint/spsc-6c61b1eaecb2ec6d/bin-spsc-6c61b1eaecb2ec6d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/deps/spsc-578d2033f33cb50b" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/deps/spsc-578d2033f33cb50b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/deps/spsc-6c61b1eaecb2ec6d" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/deps/spsc-6c61b1eaecb2ec6d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/114xigf1yyw2gcw0.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/16u6js6g0l3k1ic6.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/17erb31xn70viq4b.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/17rvs5kiht2rc8fb.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/181cuta0v63atwcm.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/1dqvxks6k2bzkxe.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/1fxq14vrn4hmbyv6.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/1im38lueib99jsk0.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/1kah9wqwskmm2ck.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/1muvu7n3dst9shj9.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/1mvmz58owquyropc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/1qfwq1rnsmcuslya.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/1rnt618l5epcaf5a.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/1s3socv0drccut20.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/1um484vjuu3ha50h.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/1vut2eft6nlujjxr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/1y16o1qfye96o7m0.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/1zwd8n7bcl3vhvvh.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/23tqyymcb18u96mb.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/2imate296whviys6.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/2jqywn86b2gsqohu.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/2lyh15q6cjwzy18c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/2xs38k3nu4oe9uo6.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/2zvsz87qqoavdzmn.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/3171x0bwu82dptu7.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/3ayaeypdcro9d6yk.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/3ik0x0hz6l66cx38.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/3oqznv5oym7l3m4e.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/3rngp6bm2u2q5z0y.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/3wta9ctgdrpkmlpr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/3ysg602ly0el3m63.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/413b4ui0b26ibw2q.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/436dotimmrgzkwfa.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/45pc7c65foh9i35f.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/47dqcamjlp23ma80.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/48721dc4k5qxei0u.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/49a7n47po4ttqjl7.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/49qmpuk8w1opmi5q.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/4bro8i2eu9dn8hoh.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/4bwka44cn8t3u4h3.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/4oc10dk278mpk1vy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/4sw9hz7i7fiueihz.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/4xq48u46a1pwiqn7.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/4yh8x2b62dcih00t.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/4ypvbwho0bu5tnww.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/51fpy5zjki32la64.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/51s1w397y42gpez1.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/5205e1onhko1v9bb.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/55byrl0clcrwu9cd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/55ezy8i7h0n87k30.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/572bgozz9kcwe4zq.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/57k06xfugllsc526.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/5b1vh7iwaxrgdt9b.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/5gf6du7k58s78kob.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/7p53qlves2rwxx0.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/8xzrsc1ux72v29j.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/98g0d9x8aw3akpe.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/9elsx31vb4it187.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/c6lbtaiefvx3wya.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/cw5ypktnm7f4onz.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/d6p2df93qm1h3gm.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/i4k5pb0sy1rhm7d.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/mb501chi8fnqgmm.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/n847vnkjamrby94.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/oa3rad818d8sgn4.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/r5omkko2zyx5xap.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/sd3ak9f4uaqbrdw.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/y08g5q2x813c4wx.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz-1uhj6fslvse4f/z9ox7biyn1otfln.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-10e2rjzb5l0tk/s-f793s0hsfn-1994jz.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/114xigf1yyw2gcw0.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/16u6js6g0l3k1ic6.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/17erb31xn70viq4b.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/17rvs5kiht2rc8fb.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/181cuta0v63atwcm.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/1dqvxks6k2bzkxe.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/1fxq14vrn4hmbyv6.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/1im38lueib99jsk0.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/1muvu7n3dst9shj9.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/1mvmz58owquyropc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/1vut2eft6nlujjxr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/1y16o1qfye96o7m0.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/1zeawhkbeobww1zn.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/1zwd8n7bcl3vhvvh.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/23tqyymcb18u96mb.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/2imate296whviys6.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/2jqywn86b2gsqohu.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/2lyh15q6cjwzy18c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/3171x0bwu82dptu7.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/3ayaeypdcro9d6yk.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/3ik0x0hz6l66cx38.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/3oqznv5oym7l3m4e.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/3rngp6bm2u2q5z0y.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/3wta9ctgdrpkmlpr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/413b4ui0b26ibw2q.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/436dotimmrgzkwfa.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/45pc7c65foh9i35f.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/48721dc4k5qxei0u.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/49a7n47po4ttqjl7.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/49qmpuk8w1opmi5q.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/4bwka44cn8t3u4h3.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/4oc10dk278mpk1vy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/4sw9hz7i7fiueihz.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/4xq48u46a1pwiqn7.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/4yh8x2b62dcih00t.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/4ypvbwho0bu5tnww.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/51fpy5zjki32la64.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/51s1w397y42gpez1.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/572bgozz9kcwe4zq.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/57k06xfugllsc526.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/5b1vh7iwaxrgdt9b.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/5gf6du7k58s78kob.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/7p53qlves2rwxx0.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/8xzrsc1ux72v29j.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/98g0d9x8aw3akpe.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/9elsx31vb4it187.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/c6lbtaiefvx3wya.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/d6p2df93qm1h3gm.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/mb501chi8fnqgmm.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/oa3rad818d8sgn4.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/y08g5q2x813c4wx.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7-w7a5qfy90izj/z9ox7biyn1otfln.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/spsc-7twe7gi5mj88/s-f793eimj3n-uhrxn7.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/spsc" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/spsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/spsc-578d2033f33cb50b" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/spsc-578d2033f33cb50b" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,14 +165,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="Rust" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="44" />
-          <entry key="Rust" value="3615" />
+          <entry key="PLAIN_TEXT" value="67" />
+          <entry key="Rust" value="3622" />
         </counts>
       </usages-collector>
     </session>
@@ -47,8 +185,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="235" column="59" lean-forward="true" selection-start-line="235" selection-start-column="59" selection-end-line="235" selection-end-column="59" />
+            <state relative-caret-position="257">
+              <caret line="234" column="59" lean-forward="true" selection-start-line="234" selection-start-column="59" selection-end-line="234" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/benchmark.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -58,15 +205,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
               <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test.rs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -89,6 +227,7 @@
         <option value="$PROJECT_DIR$/src/test.rs" />
         <option value="$PROJECT_DIR$/Cargo.lock" />
         <option value="$PROJECT_DIR$/Cargo.toml" />
+        <option value="$PROJECT_DIR$/benchmark.txt" />
         <option value="$PROJECT_DIR$/src/main.rs" />
       </list>
     </option>
@@ -119,11 +258,6 @@
               <item name="spsc" type="b2602c69:ProjectViewProjectNode" />
               <item name="spsc" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="spsc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spsc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -134,7 +268,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543860633920" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543861066214" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
@@ -152,6 +286,16 @@
     </option>
   </component>
   <component name="RunManager" selected="Cargo Command.Test main::tests">
+    <configuration name="Run spsc" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="run --package spsc --bin spsc" />
+      <option name="allFeatures" value="false" />
+      <option name="nocapture" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="Test main::tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="test --package spsc --bin spsc tests" />
@@ -166,7 +310,7 @@
       <option name="channel" value="DEFAULT" />
       <option name="command" value="test --package spsc --bin spsc tests::bench_mpsc_stdlib_throughput -- --exact" />
       <option name="allFeatures" value="false" />
-      <option name="nocapture" value="false" />
+      <option name="nocapture" value="true" />
       <option name="backtrace" value="SHORT" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
@@ -192,30 +336,20 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Test tests::test_threaded" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="channel" value="DEFAULT" />
-      <option name="command" value="test --package spsc --bin spsc tests::test_threaded -- --exact" />
-      <option name="allFeatures" value="false" />
-      <option name="nocapture" value="false" />
-      <option name="backtrace" value="SHORT" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Cargo Command.Test main::tests" />
       <item itemvalue="Cargo Command.Test tests::bench_spsc_throughput" />
-      <item itemvalue="Cargo Command.Test tests::test_threaded" />
       <item itemvalue="Cargo Command.Test tests::bench_mpsc_stdlib_throughput" />
       <item itemvalue="Cargo Command.Test tests::queue_returns_none_if_no_element_to_pop" />
+      <item itemvalue="Cargo Command.Run spsc" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Cargo Command.Test main::tests" />
-        <item itemvalue="Cargo Command.Test tests::queue_returns_none_if_no_element_to_pop" />
         <item itemvalue="Cargo Command.Test tests::bench_mpsc_stdlib_throughput" />
         <item itemvalue="Cargo Command.Test tests::bench_spsc_throughput" />
-        <item itemvalue="Cargo Command.Test tests::test_threaded" />
+        <item itemvalue="Cargo Command.Run spsc" />
+        <item itemvalue="Cargo Command.Test tests::queue_returns_none_if_no_element_to_pop" />
       </list>
     </recent_temporary>
   </component>
@@ -232,26 +366,11 @@
       <workItem from="1543504041560" duration="17253000" />
       <workItem from="1543583155863" duration="5812000" />
       <workItem from="1543593551823" duration="14000" />
-      <workItem from="1543857743710" duration="2887000" />
+      <workItem from="1543857743710" duration="3321000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_tests__test_consumer_pop - 2018.12.03 at 18h 48m 27s.xml">
-      <configuration name="Test tests::test_consumer_pop" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_main__tests - 2018.12.03 at 18h 48m 48s.xml">
-      <configuration name="Test main::tests" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_main__tests - 2018.12.03 at 18h 49m 22s.xml">
-      <configuration name="Test main::tests" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_main__tests - 2018.12.03 at 18h 56m 40s.xml">
-      <configuration name="Test main::tests" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_tests__test_threaded - 2018.12.03 at 18h 58m 18s.xml">
-      <configuration name="Test tests::test_threaded" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
     <history-entry file="Test_main__tests - 2018.12.03 at 18h 58m 34s.xml">
       <configuration name="Test main::tests" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
@@ -267,9 +386,24 @@
     <history-entry file="Test_main__tests - 2018.12.03 at 19h 10m 23s.xml">
       <configuration name="Test main::tests" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
+    <history-entry file="Test_tests__bench_mpsc_stdlib_throughput - 2018.12.03 at 19h 14m 16s.xml">
+      <configuration name="Test tests::bench_mpsc_stdlib_throughput" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_tests__bench_mpsc_stdlib_throughput - 2018.12.03 at 19h 14m 36s.xml">
+      <configuration name="Test tests::bench_mpsc_stdlib_throughput" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_main__tests - 2018.12.03 at 19h 17m 10s.xml">
+      <configuration name="Test main::tests" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_main__tests - 2018.12.03 at 19h 17m 29s.xml">
+      <configuration name="Test main::tests" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_main__tests - 2018.12.03 at 19h 17m 34s.xml">
+      <configuration name="Test main::tests" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25966000" />
+    <option name="totallyTimeSpent" value="26400000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -293,7 +427,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50142854" side_tool="true" weight="0.13365282" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24058577" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3587866" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -329,13 +463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.rs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="235" column="59" lean-forward="true" selection-start-line="235" selection-start-column="59" selection-end-line="235" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cargo.toml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -347,6 +474,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="234" column="59" lean-forward="true" selection-start-line="234" selection-start-column="59" selection-end-line="234" selection-end-column="59" />
         </state>
       </provider>
     </entry>

@@ -62,7 +62,7 @@ impl<T: Send + Copy> Producer<T> {
 	}
 
 	pub fn capacity(&self) -> Result<usize, Error> {
-		if let Ok(mut queue) = self.queue.lock() {
+		if let Ok(queue) = self.queue.lock() {
 			let capacity = queue.capacity();
 			Ok(capacity)
 		} else {
@@ -71,7 +71,7 @@ impl<T: Send + Copy> Producer<T> {
 	}
 
 	pub fn size(&self) -> Result<usize, Error> {
-		if let Ok(mut queue) = self.queue.lock() {
+		if let Ok(queue) = self.queue.lock() {
 			let len = queue.len();
 			Ok(len)
 		} else {
@@ -105,10 +105,9 @@ impl<T: Send + Copy> Consumer<T> {
 				// in case of an error from pop_front(), return
 				// a descriptive error message.
 				result = queue.pop_front();
-				println!("In Recv()");
 				match result {
 					None => {}
-					Some(res) => {
+					Some(_res) => {
 						break;
 					}
 				}
@@ -126,7 +125,7 @@ impl<T: Send + Copy> Consumer<T> {
 	}
 
 	pub fn capacity(&self) -> Result<usize, Error> {
-		if let Ok(mut queue) = self.queue.lock() {
+		if let Ok(queue) = self.queue.lock() {
 			let capacity = queue.capacity();
 			Ok(capacity)
 		} else {
@@ -135,7 +134,7 @@ impl<T: Send + Copy> Consumer<T> {
 	}
 
 	pub fn size(&self) -> Result<usize, Error> {
-		if let Ok(mut queue) = self.queue.lock() {
+		if let Ok(queue) = self.queue.lock() {
 			let len = queue.len();
 			Ok(len)
 		} else {
@@ -172,7 +171,7 @@ fn main() {
 
 	let consumer_thread = thread::spawn(move || {
 		let mut sum = 0;
-		for i in 1..count {
+		for _i in 1..count {
 			match cx.recv() {
 				Ok(val)  => {
 					println!("Receiving from producer: {:?}", val);
@@ -280,7 +279,7 @@ mod tests {
 
 
 	#[test]
-	//#[ignore]
+	#[ignore]
 	fn bench_spsc_throughput() {
 		let iterations: i64 = 2i64.pow(20);
 
@@ -310,7 +309,7 @@ mod tests {
 	use std::sync::mpsc::channel as mpsc_channel;
 
 	#[test]
-	//#[ignore]
+	#[ignore]
 	fn bench_mpsc_stdlib_throughput() {
 		let iterations: i64 = 2i64.pow(20);
 

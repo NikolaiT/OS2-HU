@@ -1,0 +1,18 @@
+Spsc Throughput: 3734137.74/s -- (iterations: 1048576 in 280808067 ns)
+test tests::bench_spsc_throughput ... ok
+
+Spsc Throughput: 3981920.85/s -- (iterations: 1048576 in 263334215 ns)
+test tests::bench_spsc_throughput ... ok
+
+Spsc Throughput: 3943985.34/s -- (iterations: 1048576 in 265867114 ns)
+test tests::bench_spsc_throughput ... ok
+
+
+MPSC Stdlib Throughput: 2779501.19/s -- (iterations: 1048576 in 377253302 ns)
+test tests::bench_mpsc_stdlib_throughput ... ok
+
+MPSC Stdlib Throughput: 2541446.97/s -- (iterations: 1048576 in 412590156 ns)
+test tests::bench_mpsc_stdlib_throughput ... ok
+
+MPSC Stdlib Throughput: 2753180.61/s -- (iterations: 1048576 in 380859867 ns)
+test tests::bench_mpsc_stdlib_throughput ... ok
